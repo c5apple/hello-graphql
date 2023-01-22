@@ -25,3 +25,20 @@ curl -XPOST -H "Content-Type:application/graphql"  -d '
    }
  }' http://localhost:5000/graphql
 ```
+
+### variables
+
+```
+query getSinglePost($userId: Int!) {
+  user(id: $userId) {
+    name
+    sex
+  }
+}
+```
+
+```
+{
+  "userId": 1
+}
+```
